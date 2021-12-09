@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QA-CADEMY-Test-Automation-04/api-automation-04.git"
+  },
+  "author": "QAAcademy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QA-CADEMY-Test-Automation-04/api-automation-04/issues"
+  },
+  "homepage": "https://github.com/QA-CADEMY-Test-Automation-04/api-automation-04#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "jest": "^27.4.3"
+  }
+}
