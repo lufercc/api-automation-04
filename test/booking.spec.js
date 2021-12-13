@@ -1,4 +1,4 @@
-const axios = require('axios');
+const requestManager = require('../src/api/core/request_manager')
 
 describe('Booking tests',  () =>{
 
@@ -19,7 +19,7 @@ describe('Booking tests',  () =>{
         let jsonHeader = {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
-          };
+        };
 
         let options = {
             method: 'POST',
@@ -29,18 +29,26 @@ describe('Booking tests',  () =>{
         };
 
         // Send Request
-        let response = undefined;
-        try{
-            response = await axios.request(options);
-            
-        }
-        catch(error) {
-            response = error.response;
-
-        }
-        console.log(response);
+        let response = await requestManager.sendRequest(options.method, options.url, options.headers, options.data);
 
         //Verify Status Code
         expect(response.status).toEqual(200);
+        let dataResponse = response.data.booking;
+        expect(dataResponse.firstname).toEqual(body.firstname);
+        expect(dataResponse.lastname).toEqual(body.lastname);
+        //.... Complete please!!!!
+
+
+        let id = response.data.bookingid;
+        let optionsGet = {
+            method: 'GET',
+            headers: {'Accept': 'application/json'},
+            url:'https://restful-booker.herokuapp.com/booking/'+ id,
+        };
+
+        response = await requestManager.sendRequest(optionsGet.method, optionsGet.url, optionsGet.headers);
+        expect(response.status).toEqual(200);
+        expect(response.data.firstname).toEqual(body.firstname);
     })
+
 })

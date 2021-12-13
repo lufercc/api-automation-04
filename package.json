@@ -18,6 +18,11 @@
   "homepage": "https://github.com/QA-CADEMY-Test-Automation-04/api-automation-04#readme",
   "dependencies": {
     "axios": "^0.24.0",
-    "jest": "^27.4.3"
+    "jest": "^27.4.3",
+    "module-alias": "^2.2.2"
+  },
+  "_moduleAliases": {
+    "@_api": "src/api"
   }
+  
 }
