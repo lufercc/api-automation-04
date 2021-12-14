@@ -3,8 +3,7 @@
 ## Getting Started
 Install the npm dependencies
 ````
-npm i axios
-npm i jest
+npm install
 ````
 ## Suggested Extensions VS code
 Open File/Preferences/Extensions
