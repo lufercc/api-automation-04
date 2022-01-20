@@ -3,17 +3,22 @@ pipeline {
  stages {
     stage("build") {
          steps {
-             bat 'build -----'
+             bat 'echo build ------'
          }
     }
      stage("test") {
          steps {
-             bat 'test ------'
+             bat 'echo test ------'
+         }
+    }
+    stage("test1") {
+         steps {
+             bat 'npm install'
          }
     }
     stage("testAnghela") {
          steps {
-             bat 'test ALQ'
+             bat 'npm run test'
          }
      }
  }
