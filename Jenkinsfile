@@ -1,10 +1,15 @@
-pipeline{
-    agent: any
-    stages{
-        stage("test"){
-            steps{
-                bat 'echo Testing ====='
-            }
-        }
+pipeline {
+ agent any
+ stages {
+    stage("build") {
+         steps {
+             bat 'build -----'
+         }
     }
+     stage("test") {
+         steps {
+             bat 'test ------'
+         }
+     }
+ }
 }
