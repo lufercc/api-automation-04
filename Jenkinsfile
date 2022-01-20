@@ -10,6 +10,11 @@ pipeline {
          steps {
              bat 'test ------'
          }
+    }
+    stage("testAnghela") {
+         steps {
+             bat 'test ALQ'
+         }
      }
  }
 }
