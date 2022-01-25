@@ -13,12 +13,12 @@ pipeline {
     }
     stage("test1") {
          steps {
-             bat 'npm install'
+             bat 'docker build -t automation:1.0.0 .'
          }
     }
     stage("testAnghela") {
          steps {
-             bat 'npm run test'
+             bat 'docker-compose up'
          }
      }
  }
