@@ -10,7 +10,7 @@ pipeline {
     }
      stage("test") {
          steps {
-             bat 'docker-compose up automation'
+             bat 'docker-compose run automation'
          }
      }
  }
