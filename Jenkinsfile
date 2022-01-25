@@ -1,10 +1,15 @@
 pipeline {
  agent any
  stages {
-     stage("test") {
+     stage("build") {
          steps {
-             bat 'echo testing ====='
+             bat 'npm install'
          }
      }
- }
+     stage("test") {
+         steps {
+             bat 'npm run test'
+         }
+     }
+  }
 }
